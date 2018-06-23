@@ -2,11 +2,17 @@
   margin: 20px 0;
 }
 
+.typed-cursor {
+}
+
+.typed-fade-out {
+}
+
 .terminal-window {
   background-color: rgba(20, 20, 20, 0.85);
   margin: 0 auto;
   width: auto;
-  min-height: 124px;
+  min-height: 180px;
   height: auto;
   text-align: left;
   position: relative;
@@ -71,19 +77,12 @@
   background-color: #e5c30f;
 }
 
-.terminal-text {
-  margin-left: 20px;
-  font-family: "Roboto Mono", monospace;
-}
-
-#typed-strings {
-  display: inline-block;
-  position: relative;
-}
-
 #typed {
   font-family: "Roboto Mono", monospace;
-  margin-left: 15px;
+  padding: 0 20px;
+  white-space: pre-line;
+  display: block;
+  line-height: 20px;
 }
 
 @media (max-width: 490px) {

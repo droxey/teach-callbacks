@@ -25,36 +25,31 @@
             <div class="row justify-content-center">
                 <div class="col-8 col-sm-12 col-xs-12 terminal">
                     <div class="terminal-window">
-                        <header class="clearfix">
+                        <header>
                             <div class="red-btn button"></div>
                             <div class="green-btn button"></div>
                             <div class="yellow-btn button"></div>
                             <div class="title">Code Visualizer</div>
                         </header>
                         <div class="window">
-                            <div id="typed-strings" class="terminal-text">
-                                <p>pip install test</p>
-                t            </div>
                             <span id="typed"></span>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-8 col-sm-12 col-xs-12">
-                    <button onclick="Puck.write('LED1.set();\n');">On!</button>
-                    <button onclick="Puck.write('LED1.reset();\n');">Off!</button>
+                <div class="row justify-content-center">
+                    <div class="col-8 col-sm-12 col-xs-12">
+                        <button onclick="connectDevice();">Connect</button>
+                    </div>
                 </div>
             </div>
-        </div>
-        <script src="https://www.puck-js.com/puck.js"></script>
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-            crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-            crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-            crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.8/typed.js"></script>
-        <script src="assets/demo.js"></script>
+            <script src="https://www.puck-js.com/puck.js"></script>
+            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+                crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+                crossorigin="anonymous"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+                crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.8/typed.js"></script>
+            <script src="assets/demo.js"></script>
     </body>
 </html>
