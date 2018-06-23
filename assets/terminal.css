@@ -1,0 +1,94 @@
+.terminal {
+  margin: 20px 0;
+}
+
+.terminal-window {
+  background-color: rgba(20, 20, 20, 0.75);
+  margin: 0 auto;
+  width: auto;
+  min-height: 124px;
+  height: auto;
+  text-align: left;
+  position: relative;
+  border-radius: 5px;
+  top: 0;
+  color: #f4faff;
+  font-size: 11pt;
+}
+
+.terminal-window .window {
+  position: relative;
+  top: -5px;
+  padding: 24px 0 8px 0;
+  width: 100%;
+}
+
+.terminal-window header {
+  background-color: #e0e8f0;
+  height: 30px;
+  border-radius: 5px 5px 0 0;
+  padding-left: 10px;
+  width: auto;
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+  width: 100%;
+}
+
+.terminal-window header .title,
+.terminal-window header .button {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 30px;
+}
+
+.terminal-window header .title {
+  color: #202020;
+  text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.75);
+  font-size: 10pt;
+  font-weight: 700;
+  padding-right: 20px;
+  position: relative;
+  right: -10px;
+}
+
+.terminal-window .button {
+  width: 12px;
+  height: 12px;
+  margin: 0;
+  border-radius: 8px;
+}
+
+.red-btn {
+  background-color: #e75448;
+}
+
+.green-btn {
+  background-color: #3bb662;
+}
+
+.yellow-btn {
+  background-color: #e5c30f;
+}
+
+.terminal-text {
+  margin-left: 20px;
+  font-family: "Roboto Mono", monospace;
+}
+
+#typed-strings {
+  display: inline-block;
+  position: relative;
+}
+
+#typed {
+  font-family: "Roboto Mono", monospace;
+  margin-left: 15px;
+}
+
+@media (max-width: 490px) {
+  .terminal-window header .button.green-btn,
+  .terminal-window header .button.yellow-btn {
+    display: none;
+  }
+}

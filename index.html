@@ -1,13 +1,60 @@
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Demo: Callbacks</title>
-        <script src="https://www.puck-js.com/puck.js"></script>
-        <script src="demo/demo.js"></script>
+        <link rel="apple-touch-icon-precomposed" sizes="57x57" href="http://s3.outputs.io/img/icon/favicon/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://s3.outputs.io/img/icon/favicon/apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://s3.outputs.io/img/icon/favicon/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://s3.outputs.io/img/icon/favicon/apple-touch-icon-144x144.png">
+        <link rel="apple-touch-icon-precomposed" sizes="120x120" href="http://s3.outputs.io/img/icon/favicon/apple-touch-icon-120x120.png">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="http://s3.outputs.io/img/icon/favicon/apple-touch-icon-152x152.png">
+        <link rel="icon" type="image/png" href="http://s3.outputs.io/img/icon/favicon/favicon-32x32.png" sizes="32x32">
+        <link href="https://pro.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-oi8o31xSQq8S0RpBcb4FaLB8LJi9AT8oIdmS1QldR8Ui7KUQjNAnDlJjp55Ba8FG"
+            crossorigin="anonymous" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+            crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700|Roboto+Mono:400,500,700" rel="stylesheet">
+        <link rel="stylesheet" href="assets/terminal.css">
+        <link rel="stylesheet" href="assets/style.css">
     </head>
     <body>
-
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-8 col-sm-12 col-xs-12 terminal">
+                    <div class="terminal-window">
+                        <header class="clearfix">
+                            <div class="red-btn button"></div>
+                            <div class="green-btn button"></div>
+                            <div class="yellow-btn button"></div>
+                            <div class="title">Code Visualizer</div>
+                        </header>
+                        <div class="window">
+                            <div id="typed-strings" class="terminal-text">
+                                <p>pip install test</p>
+                            </div>
+                            <span id="typed"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-8 col-sm-12 col-xs-12">
+                    <button onclick="Puck.write('LED1.set();\n');">On!</button>
+                    <button onclick="Puck.write('LED1.reset();\n');">Off!</button>
+                </div>
+            </div>
+        </div>
+        <script src="https://www.puck-js.com/puck.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.8/typed.js"></script>
+        <script src="assets/demo.js"></script>
     </body>
 </html>
