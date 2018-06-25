@@ -5,4 +5,3 @@
 ## Materials
 
 * [View Lesson Plan](plan/LessonPlan.md)
-* [View Demo](http://droxey.com/teach-callbacks/)

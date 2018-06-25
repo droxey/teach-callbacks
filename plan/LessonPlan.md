@@ -1,4 +1,4 @@
-# Lesson Plan - Callbacks (20 Mins)
+# Lesson Plan - Callbacks
 
 ## [1:00] Objectives
 
@@ -7,7 +7,7 @@
 * Introduce the relationship between a `function` and a `callback`.
 * Experience first-class functions first-hand via a live-action `callback` demonstration in JavaScript.
 
-## [7:00] Callbacks: Theory, Implementation, and You
+## [7:00] Callbacks: Theory and Implementation
 
 ### [1:15] Variables vs Functions
 
@@ -27,18 +27,23 @@
 * Inform students that you'll now create a simple callback that effectively demonstrates it's usage. Remember the Marco Polo game you used to play as a kid? Let's recreate that together right here, right now.
 
 ```javascript
-  function getShoutResponse(phrase) {
-      if (phrase === 'Marco') {
-    ​      console.log("Polo!");
-      }
-    }
-  };
+// 01-marco-polo.js
+// Introducing basic callbacks by implementing a simple version of a childhood game.
 
-  function shoutItOut(phrase, respondToShout) {
-    respondToShout(phrase);
-  };
+function getShoutResponse(phrase) {
+  if (phrase === "Marco") {
+    console.log("Marco? Polo!");
+  } else {
+    console.log(`${phrase}? Who?!`);
+  }
+}
 
-  shoutItOut("Marco", getShoutResponse);
+function shoutItOut(phrase, respondToShout) {
+  respondToShout(phrase);
+}
+
+shoutItOut("Marco", getShoutResponse);
+shoutItOut("Dani", getShoutResponse);
 ```
 
 * Key points to cover:
@@ -50,11 +55,21 @@
 * Anonymous functions are aptly named --- remember `shoutItOut` and `getShoutResponse` in our last example? In order to declare those functions, I had to think up a name for them. With anonymous callbacks, one need not name the callback function. Upon completion of `shoutItOut`, the body of the anonymous callback `function` is executed.
 
 ```javascript
-  function shoutItOut(phrase, function(callbackPhrase) {
-      if (phrase === 'Marco') {
-        console.log(callbackPhrase);
-      }
-  });
+// 02-marco-polo-refactor.js
+// Introducing anonymous functions, closures, and lexical scope.
+
+function shoutItOut(phrase) {
+  return function() {
+    if (phrase === "Marco") {
+      console.log(`${phrase}? Who?!`);
+    } else {
+      console.log(`${phrase} who?!`);
+    }
+  };
+}
+
+shoutItOut("Marco")();
+shoutItOut("Dani")();
 ```
 
 ### [0:45] Recap
