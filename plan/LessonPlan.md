@@ -16,7 +16,7 @@
 * When a `function` is passed to another `function`, we use a technique known as a `callback` in programming.
 * Not every language allows for these "first-class functions" --- the ability to store functions as variables.
 
-### [1:30] Why Callbacks
+### [1:30] Introducing Callbacks
 
 * We now know we save functions in variables then pass them as arguments to functions. What does that mean?
 * Developers typically intend for the `function` receiving the callback to "do some work," then call back the `function` the developer passed in. When this `callback function` is executed, the results of the trigger function are passed to the `callback function`. We can then use that data in our programs effectively.
@@ -110,7 +110,7 @@
 
 * That's the power of callbacks! They allow us to write custom code with the intention of doing some work after something else has happened. Devs love callbacks --- syntactically, they assist in adhering to DRY development principles, allowing us to leverage the same `callback` code for groups of similar items --- just like our buttons today. Simply put: we can change the behavior of our program simply by switching up the functions we pass around. Pretty powerful, right?
 
-## Wrap Up and Dismiss (3 Mins)
+## [3:00] Wrap Up and Dismiss
 
 * Check in with students and ask if they have any questions regarding callbacks: theory, callback, or demonstration. If no questions, cold call a student:
     * **Ask**: OK, last one. One sentence, in your own words: what's a `callback`?
