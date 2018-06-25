@@ -9,14 +9,14 @@
 
 ## [7:00] Callbacks: Theory, Implementation, and You
 
-### [1:30] Variables vs Functions
+### [1:15] Variables vs Functions
 
 * Inform students that a `function` can be a variable, too! Functions are just another type of value.
 * All programming languages do not adhere to this principle, however. Lucky for us, JavaScript is but one example of a language that implements **first-class functions: the ability to store functions as variables**.
 * Since a `function` can be a variable, that means we can pass a `function` as an argument to another `function`.
 * When a `function` is passed to another `function`, we use a technique known as a `callback` in programming.
 
-### [1:30] Introducing Callbacks
+### [1:00] Introducing Callbacks
 
 * We now know we save functions in variables then pass them as arguments to functions. What does that mean?
 * Developers typically intend for the `function` receiving the callback to "do some work," then call back the `function` the developer passed in. When this `callback function` is executed, the results of the trigger function are passed to the `callback function`. We can then use that data in our programs effectively.
@@ -57,7 +57,7 @@
   });
 ```
 
-### Recap
+### [0:45] Recap
 
 1. We can store `functions` in variables, just like any other value.
 1. A `callback` is just a `function` that is passed to another `function` as one of it's arguments.
