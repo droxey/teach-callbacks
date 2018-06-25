@@ -1,27 +1,27 @@
 # Lesson Plan - Callbacks (20 Mins)
 
-## Objectives (1 Min)
+## [1:00] Objectives
 
 * Expand upon students' knowledge of `functions` and `variables`.
 * Establish what a `callback` refers to in Computer Science.
 * Introduce the relationship between a `function` and a `callback`.
 * Experience first-class functions first-hand via a live-action `callback` demonstration in JavaScript.
 
-## Callbacks: Theory, Implementation, & You (7 Mins)
+## [7:00] Callbacks: Theory, Implementation, and You
 
-### Variables vs Functions
+### [1:30] Variables vs Functions
 
 * Inform students that a `function` can be a variable, too! Functions are just another type of value.
 * Since a `function` can be a variable, that means we can pass a `function` as an argument to another `function`.
 * When a `function` is passed to another `function`, we use a technique known as a `callback` in programming.
 * Not every language allows for these "first-class functions" --- the ability to store functions as variables.
 
-### Why Callbacks
+### [1:30] Why Callbacks
 
 * We now know we save functions in variables then pass them as arguments to functions. What does that mean?
 * Developers typically intend for the `function` receiving the callback to "do some work," then call back the `function` the developer passed in. When this `callback function` is executed, the results of the trigger function are passed to the `callback function`. We can then use that data in our programs effectively.
 
-### Live Code: Simple Callback
+### [4:00] Live Code: Simple Callback
 
 * Open up your editor and create a new JavaScript file.
 * Inform students that you'll now create a simple callback that effectively demonstrates it's usage. Remember the Marco Polo game you used to play as a kid? Let's recreate that together right here, right now.
@@ -63,21 +63,7 @@
 1. A `callback` is just a `function` that is passed to another `function` as one of it's arguments.
 1. A `function`, and therefore, a `callback`, can have a name, or can be implemented anonymously.
 
-## Activity - Puck.js (10 Mins)
-
-### Demo: User Story
-
-1. User **opens up website in Chrome**.
-1. System **greets User with instructions**.
-1. User **pairs Puck.js device** with Chrome.
-1. User **"clicks" Puck.js device** in order to **trigger a `callback`**.
-1. System **responds to trigger** and **executes a `callback`** that:
-    1. **Visualizes** the **trigger and `callback` code**.
-    1. **Generates** a **random RGB color**.
-    1. **Changes** the **background color** on the site to the aforementioned **generated RGB color.**
-    1. **Lights up an LED** of the **corresponding color** on the User's Puck.js device.
-
-### Demo: Walkthrough
+## [10:00] Activity - Puck.js
 
 * The best way to understand a new concept in programming is through direct experience. In this activity, we'll demonstrate what a `callback` looks like in real-life via physical, tactile buttons that trigger a change to a website.
 
@@ -86,6 +72,17 @@
 * Inform students that this might look like an ordinary, round white puck to them --- what if you told them these were special buttons that could communicate with a website you've created?
 
 * Today, we're going to experience the power of a `callback` via a live action demonstration.
+
+* Share the website's User Story with your students:
+    1. User **opens up website in Chrome**.
+    1. System **greets User with instructions**.
+    1. User **pairs Puck.js device** with Chrome.
+    1. User **"clicks" Puck.js device** in order to **trigger a `callback`**.
+    1. System **responds to trigger** and **executes a `callback`** that:
+        1. **Visualizes** the **trigger and `callback` code**.
+        1. **Generates** a **random RGB color**.
+        1. **Changes** the **background color** on the site to the aforementioned **generated RGB color.**
+        1. **Lights up an LED** of the **corresponding color** on the User's Puck.js device.
 
 * Ask students to press down on the Puck.js device you've distributed.
     * **Ask**: what happens when you press down?
