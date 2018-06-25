@@ -110,7 +110,7 @@
 
 * That's the power of callbacks! They allow us to write custom code with the intention of doing some work after something else has happened. Devs love callbacks --- syntactically, they assist in adhering to DRY development principles, allowing us to leverage the same `callback` code for groups of similar items --- just like our buttons today. Simply put: we can change the behavior of our program simply by switching up the functions we pass around. Pretty powerful, right?
 
-## [3:00] Wrap Up and Dismiss
+## [2:00] Wrap Up and Dismiss
 
 * Check in with students and ask if they have any questions regarding callbacks: theory, callback, or demonstration. If no questions, cold call a student:
     * **Ask**: OK, last one. One sentence, in your own words: what's a `callback`?
