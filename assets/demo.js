@@ -1,14 +1,12 @@
-var typed = new Typed("#typed", {
-  strings: ["Click connect to start the live action callback demonstration..."],
-  typeSpeed: 40,
-  smartBackspace: true,
-  backDelay: 5000,
-  loop: true,
-  cursorChar: "_"
-});
-
 var connection;
 var hexCodeHistory = [];
+var typed = new Typed("#typed", {
+  typeSpeed: 40,
+  cursorChar: "_",
+  backDelay: 5000,
+  loop: true,
+  strings: ["Click connect to start the live-action callback demo..."]
+});
 
 function connectDevice() {
   disconnectDevice();
@@ -25,8 +23,12 @@ function connectDevice() {
         if (isColorChange) {
           var parsedLine = line.split("[J");
           var rgbString = parsedLine[1];
+
           $("body").css({ "background-color": rgbString });
-          addHexCode(rgbString);
+          hexCodeHistory.push(`${rgbString}`);
+          resetTyped(
+            "Callback executed!\n^200 `Received color: " + rgbString + "`"
+          );
         }
       } catch (e) {
         console.error("Exception thrown in connectDevice.readLine:", e);
@@ -44,11 +46,26 @@ function connectDevice() {
         i = buf.indexOf("\n");
       }
     });
+
+    resetTyped("Connected to device!");
   });
 }
 
-function addHexCode(rgbString) {
-  hexCodeHistory.push(rgbString);
+function resetTyped(newLines) {
+  if (newLines === undefined || newLines.length === 0) {
+    return;
+  }
+
+  if (typed && typed.constructor === Typed) {
+    typed.destroy();
+  }
+
+  var strings = [`${newLines}`];
+  typed = new Typed("#typed", {
+    typeSpeed: 40,
+    cursorChar: "_",
+    strings: strings
+  });
 }
 
 function disconnectDevice() {
