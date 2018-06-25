@@ -27,7 +27,7 @@
 * Inform students that you'll now create a simple callback that effectively demonstrates it's usage. Remember the Marco Polo game you used to play as a kid? Let's recreate that together right here, right now.
 
 ```javascript
-  function getShoutResponse(phrase, responsePhrase) {
+  function getShoutResponse(phrase) {
       if (phrase === 'Marco') {
     ​      console.log("Polo!");
       }
@@ -42,12 +42,12 @@
 ```
 
 * Key points to cover:
-    * Passing a `function` to another `function` does not require the use of parenthesis. Parenthesis execute a `function` immediately. That isn't what we want here!  We want to run the `function` when someone shouts "Polo!"
-    * Simply put, don't include parenthesis when we pass a `function` as an argument to another `function` unless you intend to use the **result** of that `function`.
+    * Passing a `function` to another `function` does not require the use of parenthesis. Parenthesis execute a `function` immediately. That isn't what we want here!  We want to run the `function` when someone shouts "Marco!"
+    * Rule of thumb: don't include parenthesis when passing a `function` as an argument --- unless you intend to use the **result** of that `function`.
 
-* Let's refactor the code a little to use a different kind of technique to pass a function to another function: **anonymous functions**.
+* Let's refactor the code a little and implement a different approach to a `callback`: **anonymous functions**.
 
-* Anonymous functions are aptly named --- remember `shoutItOut` and `getShoutResponse` in our last example? Those functions have names. How about this example? Notice that I didn't have to name the callback function in this instance; syntactically, it's just a `function` with some arguments, then passed to `shoutItOut`. The body of the anonymous callback `function` is executed once `shoutItOut` completes.
+* Anonymous functions are aptly named --- remember `shoutItOut` and `getShoutResponse` in our last example? In order to declare those functions, I had to think up a name for them. With anonymous callbacks, one need not name the callback function. Upon completion of `shoutItOut`, the body of the anonymous callback `function` is executed.
 
 ```javascript
   function shoutItOut(phrase, function(callbackPhrase) {
@@ -96,7 +96,7 @@
 
 * Let's see that first hand, so we can better understand what that means for us as software developers!
 
-* Open up the [demo site](http://droxey.com/teach-callbacks/) in Chrome.
+* Open up the [demo site](http://localhost:8899) in Chrome.
 
 * Inform students that you've created a website that will respond to each button's "click event" via a `callback`.
 
