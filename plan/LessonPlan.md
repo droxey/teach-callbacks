@@ -88,7 +88,7 @@
     * **Ask**: what happens when you press down?
     * **Answer**: It clicks!
 
-* Great! It clicks. A "click" is one example of an **event handler** -- a "trigger" that invokes another action. Callbacks allow us to write some custom code in response to that trigger.
+* Great! It clicks. A "click" is one example of an **event handler** -- a "trigger" that invokes another action. Callbacks allow us to write some custom code in response to that trigger. On the web, event handlers are a great example of callbacks in action!
     * **Ask**: what are some other "events" that might occur on a webpage?
     * **Answer**: form submission, typing, resizing the browser, location updates, notifications, etc.
 
