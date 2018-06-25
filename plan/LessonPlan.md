@@ -12,9 +12,9 @@
 ### [1:30] Variables vs Functions
 
 * Inform students that a `function` can be a variable, too! Functions are just another type of value.
+* All programming languages do not adhere to this principle, however. Lucky for us, JavaScript is but one example of a language that implements **first-class functions: the ability to store functions as variables**.
 * Since a `function` can be a variable, that means we can pass a `function` as an argument to another `function`.
 * When a `function` is passed to another `function`, we use a technique known as a `callback` in programming.
-* Not every language allows for these "first-class functions" --- the ability to store functions as variables.
 
 ### [1:30] Introducing Callbacks
 
