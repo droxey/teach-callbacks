@@ -1,19 +1,17 @@
+var typed = new Typed("#typed", {
+  strings: ["Click connect to start the live action callback demonstration..."],
+  typeSpeed: 40,
+  smartBackspace: true,
+  backDelay: 5000,
+  loop: true,
+  cursorChar: "_"
+});
+
 var connection;
+var hexCodeHistory = [];
 
 function connectDevice() {
-  if (connection) {
-    connection.close();
-    connection = undefined;
-  }
-
-  var readLine = function(line) {
-    try {
-      var j = JSON.parse(line);
-      console.log("Received JSON: ", j);
-    } catch (e) {
-      console.log("Received: ", line);
-    }
-  };
+  disconnectDevice();
 
   Puck.connect(function(c) {
     if (!c) {
@@ -21,8 +19,22 @@ function connectDevice() {
       return;
     }
 
-    connection = c;
+    var readLine = function(line) {
+      try {
+        var isColorChange = line.indexOf("#") !== -1;
+        if (isColorChange) {
+          var parsedLine = line.split("[J");
+          var rgbString = parsedLine[1];
+          $("body").css({ "background-color": rgbString });
+          addHexCode(rgbString);
+        }
+      } catch (e) {
+        console.error("Exception thrown in connectDevice.readLine:", e);
+      }
+    };
+
     var buf = "";
+    connection = c;
     connection.on("data", function(d) {
       buf += d;
       var i = buf.indexOf("\n");
@@ -35,15 +47,13 @@ function connectDevice() {
   });
 }
 
-function writeLine(cmd) {
-  connection.write("reset();\n", function() {
-    setTimeout(function() {
-      connection.write(
-        `setInterval(function(){Bluetooth.println(${cmd});},500);NRF.on('disconnect', function() {reset()});\n`,
-        function() {
-          console.log("Ready...");
-        }
-      );
-    }, 1500);
-  });
+function addHexCode(rgbString) {
+  hexCodeHistory.push(rgbString);
+}
+
+function disconnectDevice() {
+  if (connection) {
+    connection.close();
+    connection = undefined;
+  }
 }

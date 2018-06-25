@@ -4,6 +4,5 @@
 
 ## Materials
 
-* [WIP: View Demo](http://www.google.com)
-* [WIP: View Lesson Plan](plan/LessonPlan.md)
-
+* [View Lesson Plan](plan/LessonPlan.md)
+* [View Demo](http://droxey.com/teach-callbacks/)

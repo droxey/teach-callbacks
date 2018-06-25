@@ -3,6 +3,9 @@
 }
 
 .typed-cursor {
+  opacity: 0.75;
+  color: lime;
+  font-weight: 900;
 }
 
 .typed-fade-out {
@@ -25,7 +28,7 @@
 .terminal-window .window {
   position: relative;
   top: -5px;
-  padding: 24px 0 8px 0;
+  padding: 0 0 8px 0;
   width: 100%;
 }
 
@@ -79,9 +82,9 @@
 
 #typed {
   font-family: "Roboto Mono", monospace;
-  padding: 0 20px;
+  padding: 20px 0 20px 20px;
   white-space: pre-line;
-  display: block;
+  display: inline-block;
   line-height: 20px;
 }
 
